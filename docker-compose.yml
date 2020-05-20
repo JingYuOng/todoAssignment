@@ -1,0 +1,8 @@
+version: '3'
+
+########################
+# Setup node container
+#########################
+
+server:
+  mongo: 

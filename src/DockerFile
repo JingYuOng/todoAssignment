@@ -1,0 +1,14 @@
+FROM node:10.15.0
+
+# Create app dicectory in container
+RUN mkdir -p /srv/app/todo-fronted
+WORKDIR /srv/app/todo-fronted 
+
+COPY package.json /srv/app/todo-fronted
+COPY package-lock.json /srv/app/todo-fronted
+
+RUN npm install
+
+COPY . /srv/app/todo-fronted
+
+CMD ["npm" , "start"]

@@ -12,6 +12,8 @@ const adminRoutes = require('./routes/admin');
 // 	next();
 // });
 
+
+// Please replce the mongo altas url with your username and password !!
 mongoose
 	.connect(
 		'mongodb+srv://jingyu:JwhyReus1212@cluster0-1l2z3.mongodb.net/todo?retryWrites=true&w=majority'

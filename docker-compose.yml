@@ -1,8 +1,26 @@
 version: '3'
 
-########################
-# Setup node container
-#########################
+// Could not build the mongo altas image
 
-server:
-  mongo: 
+services:
+  mongodb:
+    image: ""
+  backend:
+    build: ./server/
+    ports: 
+      - "5000:5000"
+    volumes:
+      - ./server:/srv/app/todo-server
+      - "srv/app/todo-server/node_modules"
+     depends_on:
+      - mongodb
+      
+  frontend: 
+    build: ./src/
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./src:/srv/app/todo-fronted
+      - "/usr/src/frontend/app/node_modules"
+    depends_on:
+      - backend

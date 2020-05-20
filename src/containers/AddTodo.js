@@ -228,7 +228,7 @@ class AddTodo extends React.Component {
 					}}
 				>
 					<Row>
-						<Col xs={12} style={{ marginTop: "20px" }}>
+						<Col xs={12}>
 							<p style={{ fontWeight: "bold", fontSize: "40px", color: "red", textAlign: "center" }}>
 								TodoList App By JingYu
 						</p>
@@ -250,24 +250,25 @@ class AddTodo extends React.Component {
 
 							<Button type="submit" style={{
 								color: "white", borderRadius: "8px", backgroundColor: "#008000",
-								marginTop: "10px", height: "60px", width: "150px", fontSize: "15px", font: "bold"
+								marginTop: "15px", height: "60px", width: "150px", fontSize: "15px", font: "bold"
 							}}
 								onClick={this.createTask}>
 								Create Task
   								</Button>
 							<Button type="submit" style={{
 								color: "white", borderRadius: "8px", backgroundColor: "#0000FF",
-								marginTop: "10px", height: "60px", width: "150px", fontSize: "15px", font: "bold", marginLeft: "20px"
+								marginTop: "15px", height: "60px", width: "150px", fontSize: "15px", font: "bold", marginLeft: "20px"
 							}}
 								onClick={this.retrieveAllTask}>
-								Display All Task
+								All Tasks
   								</Button>
+
 							<Button type="submit" style={{
-								color: "white", borderRadius: "8px", backgroundColor: "#0000FF",
-								height: "60px", width: "150px", fontSize: "15px", font: "bold", marginLeft: "20px"
+								color: "white", borderRadius: "8px", backgroundColor: "#008000",
+								height: "60px", width: "150px", fontSize: "15px", font: "bold", marginLeft: "20px", marginTop: "1px"
 							}}
 								onClick={this.retrieveIncompletedTask}>
-								Display InCompleted Task
+								InCompleted Tasks
   								</Button>
 
 							<Button type="submit" style={{
@@ -275,8 +276,9 @@ class AddTodo extends React.Component {
 								height: "60px", width: "150px", fontSize: "15px", font: "bold", marginLeft: "20px"
 							}}
 								onClick={this.retrieveCompletedTask}>
-								Display Completed Task
+								Completed Tasks
   								</Button>
+
 						</Col>
 					</Row>
 				</div>
